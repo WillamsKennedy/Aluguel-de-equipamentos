@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-06-07T14:02:58.776377" rpa="false" schemaversion="5">
+<suite id="s1" name="Cenario04 Documento Tipo Incompativel" source="D:\Download\Aluguel-de-equipamentos\Aluguel-de-equipamentos\tests\Cenario04_Documento_Tipo_Incompativel.robot">
+<test id="s1-t1" name="Caso de Teste 04: Tipo CNPJ Nao Deve Aceitar Valor De CPF" line="34">
+<kw name="Abrir O Sistema E Efetuar Login" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T14:02:59.173474" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\1b4d9c82-9205-4831-b424-3a03e6830b4e"}</msg>
+<msg time="2026-06-07T14:02:59.196817" level="INFO">Starting Browser process C:\Users\drago\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:63296</msg>
+<msg time="2026-06-07T14:03:00.462774" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\1b4d9c82-9205-4831-b424-3a03e6830b4e"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-06-07T14:02:59.172875" elapsed="1.290399"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-06-07T14:03:01.233769" level="INFO">Successfully initialized new page object and opened url: http://localhost/Aluguel-de-equipamentos/public/index.html</msg>
+<msg time="2026-06-07T14:03:01.233839" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>url=http://localhost/Aluguel-de-equipamentos/public/index.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-06-07T14:03:00.463781" elapsed="0.770204"/>
+</kw>
+<kw name="Preencher Credenciais De Acesso" owner="Login_Steps">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:01.235239" level="INFO">Fills the text 'admin' in the given field.</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:01.234644" elapsed="0.032958"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:01.268473" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:01.267830" elapsed="0.011764"/>
+</kw>
+<arg>admin</arg>
+<arg>admin123</arg>
+<status status="PASS" start="2026-06-07T14:03:01.234231" elapsed="0.045499"/>
+</kw>
+<kw name="Submeter Formulario De Login" owner="Login_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:01.280724" level="INFO">Clicks the element 'id=btn-login-submit'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:01.280261" elapsed="0.303901"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:03:01.279902" elapsed="0.304404"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-07T14:03:02.417012" level="INFO">Waited for Element with selector id=page-title at state visible</msg>
+<arg>id=page-title</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-07T14:03:01.584459" elapsed="0.832713"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:02:59.172217" elapsed="3.245061"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-06-07T14:03:02.417942" level="INFO">${sufixo} = 220342</msg>
+<var>${sufixo}</var>
+<arg>6</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.417436" elapsed="0.000538"/>
+</kw>
+<kw name="Acessar A Tela De Clientes" owner="Cliente_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:02.418815" level="INFO">Clicks the element 'css=.nk-menu-item[data-page="clientes"] .nk-menu-link'.</msg>
+<arg>${MENU_CLIENTES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.418403" elapsed="0.029741"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:02.449728" level="INFO">Clicks the element 'css=button[onclick="openModal('modal-novo-cliente')"]'.</msg>
+<arg>${BTN_NOVO_CLIENTE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.448922" elapsed="0.033129"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-07T14:03:02.490078" level="INFO">Waited for Element with selector id=modal-novo-cliente at state visible</msg>
+<arg>${MODAL_NOVO_CLIENTE}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.482366" elapsed="0.007955"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:03:02.418109" elapsed="0.072376"/>
+</kw>
+<kw name="Preencher Dados Do Cliente" owner="Cliente_Steps">
+<kw name="Select Options By" owner="Browser">
+<msg time="2026-06-07T14:03:02.491914" level="INFO">Selects the option(s) cnpj by attribute SelectAttribute.value from element id=tipo-doc.</msg>
+<arg>${CLI_SELECT_TIPO_DOC}</arg>
+<arg>value</arg>
+<arg>${tipo_doc}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.491385" elapsed="0.025641"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:02.517970" level="INFO">Fills the text 'Cliente Tipo CNPJ Com CPF' in the given field.</msg>
+<arg>${CLI_INPUT_NOME}</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.517283" elapsed="0.008627"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:02.526698" level="INFO">Fills the text 'cnpj.comcpf.220342@exemplo.com' in the given field.</msg>
+<arg>${CLI_INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.526113" elapsed="0.011519"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:02.538738" level="INFO">Fills the text '529.982.247-25' in the given field.</msg>
+<arg>${CLI_INPUT_DOCUMENTO}</arg>
+<arg>${documento}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.537886" elapsed="0.016353"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:02.555376" level="INFO">Fills the text '(11) 98888-7777' in the given field.</msg>
+<arg>${CLI_INPUT_TELEFONE}</arg>
+<arg>${telefone}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.554521" elapsed="0.014112"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:02.569627" level="INFO">Fills the text '01001-000' in the given field.</msg>
+<arg>${CLI_INPUT_CEP}</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.568866" elapsed="0.016720"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:02.589190" level="INFO">Fills the text 'Rua das Flores, 100, Centro, São Paulo' in the given field.</msg>
+<arg>${CLI_INPUT_ENDERECO}</arg>
+<arg>${endereco}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.585917" elapsed="0.023307"/>
+</kw>
+<arg>nome=Cliente Tipo CNPJ Com CPF</arg>
+<arg>email=cnpj.comcpf.${sufixo}@exemplo.com</arg>
+<arg>tipo_doc=cnpj</arg>
+<arg>documento=529.982.247-25</arg>
+<arg>telefone=(11) 98888-7777</arg>
+<arg>endereco=Rua das Flores, 100, Centro, São Paulo</arg>
+<arg>cep=01001-000</arg>
+<status status="PASS" start="2026-06-07T14:03:02.490788" elapsed="0.118575"/>
+</kw>
+<kw name="Submeter Cadastro De Cliente" owner="Cliente_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:02.610419" level="INFO">Clicks the element 'css=#modal-novo-cliente .modal-footer .btn-primary'.</msg>
+<arg>${BTN_CADASTRAR_CLIENTE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.609973" elapsed="0.196470"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:03:02.609559" elapsed="0.197015"/>
+</kw>
+<kw name="Validar Que O Documento Incompativel Com O Tipo Deve Ser Recusado" owner="Cliente_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-07T14:03:02.807664" level="INFO">${toast_sucesso} = css=.toast-item.toast-success:has-text("cadastrado!")</msg>
+<var>${toast_sucesso}</var>
+<arg>css=.toast-item.toast-success:has-text("cadastrado!")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.807308" elapsed="0.000383"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-07T14:03:04.136494" level="INFO">Waited for Element with selector css=.toast-item.toast-success:has-text("cadastrado!") at state visible</msg>
+<arg>${toast_sucesso}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-07T14:03:02.807779" elapsed="1.328882"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-06-07T14:03:04.137420" level="FAIL">BUG: tipo "cnpj" aceitou o documento incompativel "529.982.247-25". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</msg>
+<arg>BUG: tipo "${tipo_selecionado}" aceitou o documento incompativel "${documento_informado}". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-06-07T14:03:04.136833" elapsed="0.000732">BUG: tipo "cnpj" aceitou o documento incompativel "529.982.247-25". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</status>
+</kw>
+<arg>cnpj</arg>
+<arg>529.982.247-25</arg>
+<status status="FAIL" start="2026-06-07T14:03:02.806770" elapsed="1.330902">BUG: tipo "cnpj" aceitou o documento incompativel "529.982.247-25". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</status>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2026-06-07T14:03:04.343551" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T14:03:04.137873" elapsed="0.205870"/>
+</kw>
+<doc>Seleciona o tipo CNPJ e informa um valor no formato de CPF
+(11 dígitos). O sistema deveria recusar, mas aceita (BUG).</doc>
+<tag>bug</tag>
+<tag>cadastro</tag>
+<tag>cliente</tag>
+<tag>documento</tag>
+<status status="FAIL" start="2026-06-07T14:02:59.171482" elapsed="5.172358">BUG: tipo "cnpj" aceitou o documento incompativel "529.982.247-25". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</status>
+</test>
+<test id="s1-t2" name="Caso de Teste 05: Tipo CPF Nao Deve Aceitar Valor De CNPJ" line="51">
+<kw name="Abrir O Sistema E Efetuar Login" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T14:03:04.353398" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\f5565c84-dc1e-4d6c-b15f-8ec28bc46854"}</msg>
+<msg time="2026-06-07T14:03:04.574541" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\f5565c84-dc1e-4d6c-b15f-8ec28bc46854"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-06-07T14:03:04.352785" elapsed="0.222430"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-06-07T14:03:05.285010" level="INFO">Successfully initialized new page object and opened url: http://localhost/Aluguel-de-equipamentos/public/index.html</msg>
+<msg time="2026-06-07T14:03:05.285088" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>url=http://localhost/Aluguel-de-equipamentos/public/index.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-06-07T14:03:04.575644" elapsed="0.709597"/>
+</kw>
+<kw name="Preencher Credenciais De Acesso" owner="Login_Steps">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:05.286698" level="INFO">Fills the text 'admin' in the given field.</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:05.286072" elapsed="0.025149"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:05.312138" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>${senha}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:05.311422" elapsed="0.012662"/>
+</kw>
+<arg>admin</arg>
+<arg>admin123</arg>
+<status status="PASS" start="2026-06-07T14:03:05.285524" elapsed="0.038738"/>
+</kw>
+<kw name="Submeter Formulario De Login" owner="Login_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:05.325519" level="INFO">Clicks the element 'id=btn-login-submit'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:05.325040" elapsed="0.303244"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:03:05.324486" elapsed="0.303974"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-07T14:03:06.457398" level="INFO">Waited for Element with selector id=page-title at state visible</msg>
+<arg>id=page-title</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-07T14:03:05.628803" elapsed="0.828802"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:03:04.352373" elapsed="2.105340"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-06-07T14:03:06.458290" level="INFO">${sufixo} = 703966</msg>
+<var>${sufixo}</var>
+<arg>6</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.457862" elapsed="0.000452"/>
+</kw>
+<kw name="Acessar A Tela De Clientes" owner="Cliente_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:06.459164" level="INFO">Clicks the element 'css=.nk-menu-item[data-page="clientes"] .nk-menu-link'.</msg>
+<arg>${MENU_CLIENTES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.458736" elapsed="0.032708"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:06.492430" level="INFO">Clicks the element 'css=button[onclick="openModal('modal-novo-cliente')"]'.</msg>
+<arg>${BTN_NOVO_CLIENTE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.491689" elapsed="0.032534"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-07T14:03:06.529644" level="INFO">Waited for Element with selector id=modal-novo-cliente at state visible</msg>
+<arg>${MODAL_NOVO_CLIENTE}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.524538" elapsed="0.005241"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:03:06.458445" elapsed="0.071435"/>
+</kw>
+<kw name="Preencher Dados Do Cliente" owner="Cliente_Steps">
+<kw name="Select Options By" owner="Browser">
+<msg time="2026-06-07T14:03:06.532072" level="INFO">Selects the option(s) cpf by attribute SelectAttribute.value from element id=tipo-doc.</msg>
+<arg>${CLI_SELECT_TIPO_DOC}</arg>
+<arg>value</arg>
+<arg>${tipo_doc}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.531094" elapsed="0.023134"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:06.555088" level="INFO">Fills the text 'Cliente Tipo CPF Com CNPJ' in the given field.</msg>
+<arg>${CLI_INPUT_NOME}</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.554443" elapsed="0.007814"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:06.563076" level="INFO">Fills the text 'cpf.comcnpj.703966@exemplo.com' in the given field.</msg>
+<arg>${CLI_INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.562451" elapsed="0.009033"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:06.572846" level="INFO">Fills the text '11.222.333/0001-81' in the given field.</msg>
+<arg>${CLI_INPUT_DOCUMENTO}</arg>
+<arg>${documento}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.571919" elapsed="0.011006"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:06.583756" level="INFO">Fills the text '(11) 98888-7777' in the given field.</msg>
+<arg>${CLI_INPUT_TELEFONE}</arg>
+<arg>${telefone}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.583140" elapsed="0.012932"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:06.596978" level="INFO">Fills the text '01001-000' in the given field.</msg>
+<arg>${CLI_INPUT_CEP}</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.596281" elapsed="0.014250"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-07T14:03:06.611520" level="INFO">Fills the text 'Rua das Flores, 100, Centro, São Paulo' in the given field.</msg>
+<arg>${CLI_INPUT_ENDERECO}</arg>
+<arg>${endereco}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.610799" elapsed="0.012887"/>
+</kw>
+<arg>nome=Cliente Tipo CPF Com CNPJ</arg>
+<arg>email=cpf.comcnpj.${sufixo}@exemplo.com</arg>
+<arg>tipo_doc=cpf</arg>
+<arg>documento=11.222.333/0001-81</arg>
+<arg>telefone=(11) 98888-7777</arg>
+<arg>endereco=Rua das Flores, 100, Centro, São Paulo</arg>
+<arg>cep=01001-000</arg>
+<status status="PASS" start="2026-06-07T14:03:06.530072" elapsed="0.093786"/>
+</kw>
+<kw name="Submeter Cadastro De Cliente" owner="Cliente_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-07T14:03:06.625245" level="INFO">Clicks the element 'css=#modal-novo-cliente .modal-footer .btn-primary'.</msg>
+<arg>${BTN_CADASTRAR_CLIENTE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.624709" elapsed="0.201966"/>
+</kw>
+<status status="PASS" start="2026-06-07T14:03:06.624183" elapsed="0.202654"/>
+</kw>
+<kw name="Validar Que O Documento Incompativel Com O Tipo Deve Ser Recusado" owner="Cliente_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-07T14:03:06.827820" level="INFO">${toast_sucesso} = css=.toast-item.toast-success:has-text("cadastrado!")</msg>
+<var>${toast_sucesso}</var>
+<arg>css=.toast-item.toast-success:has-text("cadastrado!")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.827480" elapsed="0.000366"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-07T14:03:08.163550" level="INFO">Waited for Element with selector css=.toast-item.toast-success:has-text("cadastrado!") at state visible</msg>
+<arg>${toast_sucesso}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-07T14:03:06.827941" elapsed="1.335775"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-06-07T14:03:08.164461" level="FAIL">BUG: tipo "cpf" aceitou o documento incompativel "11.222.333/0001-81". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</msg>
+<arg>BUG: tipo "${tipo_selecionado}" aceitou o documento incompativel "${documento_informado}". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-06-07T14:03:08.163883" elapsed="0.000654">BUG: tipo "cpf" aceitou o documento incompativel "11.222.333/0001-81". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</status>
+</kw>
+<arg>cpf</arg>
+<arg>11.222.333/0001-81</arg>
+<status status="FAIL" start="2026-06-07T14:03:06.827058" elapsed="1.337577">BUG: tipo "cpf" aceitou o documento incompativel "11.222.333/0001-81". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</status>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2026-06-07T14:03:08.329711" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T14:03:08.164864" elapsed="0.165337"/>
+</kw>
+<doc>Seleciona o tipo CPF e informa um valor no formato de CNPJ
+(14 dígitos). O sistema deveria recusar, mas aceita (BUG).</doc>
+<tag>bug</tag>
+<tag>cadastro</tag>
+<tag>cliente</tag>
+<tag>documento</tag>
+<status status="FAIL" start="2026-06-07T14:03:04.349421" elapsed="3.980874">BUG: tipo "cpf" aceitou o documento incompativel "11.222.333/0001-81". Esperado: cadastro recusado por documento invalido para o tipo selecionado.</status>
+</test>
+<doc>TESTE DE BUG (esperado FALHAR no sistema atual).
+
+Defeito: no cadastro de cliente, o sistema NÃO valida se o
+documento informado corresponde ao "Tipo de Documento" escolhido.
+Assim:
+  - selecionando CNPJ, ele aceita um valor no formato de CPF;
+  - selecionando CPF, ele aceita um valor no formato de CNPJ.
+
+As regras de negócio do domínio exigem o contrário:
+  - src/Domain/Client/ValueObjects/CPF.php  -&gt; exatamente 11 dígitos;
+  - src/Domain/Client/ValueObjects/CNPJ.php -&gt; exatamente 14 dígitos.
+
+Estes cenários verificam o comportamento ESPERADO (recusar o
+documento incompatível). Eles FALHAM contra a versão atual,
+pois o front-end (salvarCliente em app.js) cadastra mesmo assim.</doc>
+<status status="FAIL" start="2026-06-07T14:02:58.777751" elapsed="9.557056"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">bug</stat>
+<stat pass="0" fail="2" skip="0">cadastro</stat>
+<stat pass="0" fail="2" skip="0">cliente</stat>
+<stat pass="0" fail="2" skip="0">documento</stat>
+</tag>
+<suite>
+<stat name="Cenario04 Documento Tipo Incompativel" id="s1" pass="0" fail="2" skip="0">Cenario04 Documento Tipo Incompativel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

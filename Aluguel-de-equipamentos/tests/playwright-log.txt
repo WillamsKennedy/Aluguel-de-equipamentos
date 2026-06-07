@@ -1,0 +1,17 @@
+D:\Download\Aluguel-de-equipamentos\Aluguel-de-equipamentos\venv\Lib\site-packages\Browser\wrapper\node_modules\pino\lib\tools.js:32
+const asJsonChan = diagChan.tracingChannel('pino_asJson')
+                            ^
+
+TypeError: diagChan.tracingChannel is not a function
+    at Object.<anonymous> (D:\Download\Aluguel-de-equipamentos\Aluguel-de-equipamentos\venv\Lib\site-packages\Browser\wrapper\node_modules\pino\lib\tools.js:32:29)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at Object.<anonymous> (D:\Download\Aluguel-de-equipamentos\Aluguel-de-equipamentos\venv\Lib\site-packages\Browser\wrapper\node_modules\pino\lib\levels.js:12:26)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+
+Node.js v18.16.1
