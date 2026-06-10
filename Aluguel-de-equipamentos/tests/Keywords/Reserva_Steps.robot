@@ -60,3 +60,12 @@ Validar Devolucao Registrada
 
 Validar Existe Pagamentos
     Get Element Count    ${ROW_PAGAMENTOS}    >    ${0}
+
+Validar Detalhes Do Pagamento
+    [Arguments]    ${ref}    ${reserva}    ${metodo}    ${valor}    ${status}
+    ${linha}=    Set Variable    css=#tbody-pagamentos tr:has-text("${ref}")
+    Wait For Elements State    ${linha}    visible    timeout=10s
+    Get Text    ${linha}    contains    ${reserva}
+    Get Text    ${linha}    contains    ${metodo}
+    Get Text    ${linha}    contains    ${valor}
+    Get Text    ${linha}    contains    ${status}

@@ -1,457 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-06-08T21:40:00.770255" rpa="false" schemaversion="5">
-<suite id="s1" name="Cenario06 Gerenciamento Status &amp; Cenario09 Calculo Valor">
-<suite id="s1-s1" name="Cenario06 Gerenciamento Status" source="D:\Download\Aluguel-de-equipamentos\Aluguel-de-equipamentos\tests\Cenario06_Gerenciamento_Status.robot">
-<test id="s1-s1-t1" name="Teste De Gerenciamento De Status" line="9">
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-06-09T20:51:41.536041" rpa="false" schemaversion="5">
+<suite id="s1" name="Cenario17" source="D:\Download\Aluguel-de-equipamentos\Aluguel-de-equipamentos\tests\Cenario17.robot">
+<test id="s1-t1" name="Teste De Processamento De Pagamento" line="9">
 <kw name="Abrir Sistema Limpo E Logar" owner="Common_Steps" type="SETUP">
 <kw name="Abrir O Sistema Com Dados Limpos" owner="Common_Steps">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-06-08T21:40:01.135424" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\79060fa7-a8e7-47c6-bafe-9077f197765e"}</msg>
-<msg time="2026-06-08T21:40:01.161150" level="INFO">Starting Browser process C:\Users\drago\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62106</msg>
-<msg time="2026-06-08T21:40:02.417510" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\79060fa7-a8e7-47c6-bafe-9077f197765e"}</msg>
+<msg time="2026-06-09T20:51:42.088445" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\618cc000-f9a9-433c-8d53-3c406d3483a4"}</msg>
+<msg time="2026-06-09T20:51:42.177901" level="INFO">Starting Browser process C:\Users\drago\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:51073</msg>
+<msg time="2026-06-09T20:51:43.785388" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\618cc000-f9a9-433c-8d53-3c406d3483a4"}</msg>
 <arg>browser=chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-06-08T21:40:01.134824" elapsed="1.283016"/>
+<status status="PASS" start="2026-06-09T20:51:42.087716" elapsed="1.697999"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-06-08T21:40:03.138337" level="INFO">Successfully initialized new page object and opened url: http://localhost/Aluguel-de-equipamentos/public/index.html</msg>
-<msg time="2026-06-08T21:40:03.138420" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2026-06-09T20:51:44.607987" level="INFO">Successfully initialized new page object and opened url: http://localhost/Aluguel-de-equipamentos/public/index.html</msg>
+<msg time="2026-06-09T20:51:44.608093" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>url=http://localhost/Aluguel-de-equipamentos/public/index.html</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-06-08T21:40:02.418196" elapsed="0.720390"/>
+<status status="PASS" start="2026-06-09T20:51:43.786326" elapsed="0.821966"/>
 </kw>
 <kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2026-06-08T21:40:03.148630" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-06-09T20:51:44.618019" level="INFO">JavaScript executed successfully.</msg>
 <arg>${None}</arg>
 <arg>() =&gt; window.localStorage.clear()</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="PASS" start="2026-06-08T21:40:03.138799" elapsed="0.009998"/>
+<status status="PASS" start="2026-06-09T20:51:44.608496" elapsed="0.009700"/>
 </kw>
 <kw name="Reload" owner="Browser">
-<msg time="2026-06-08T21:40:03.185473" level="INFO">Reloaded page with options: {"waitUntil": "load"}</msg>
+<msg time="2026-06-09T20:51:44.649445" level="INFO">Reloaded page with options: {"waitUntil": "load"}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Reloads current active page.</doc>
-<status status="PASS" start="2026-06-08T21:40:03.149024" elapsed="0.036767"/>
+<status status="PASS" start="2026-06-09T20:51:44.618416" elapsed="0.031273"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:03.211711" level="INFO">Waited for Element with selector id=login-card at state visible</msg>
+<msg time="2026-06-09T20:51:44.674155" level="INFO">Waited for Element with selector id=login-card at state visible</msg>
 <arg>id=login-card</arg>
 <arg>visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:03.186059" elapsed="0.025823"/>
+<status status="PASS" start="2026-06-09T20:51:44.649963" elapsed="0.024373"/>
 </kw>
-<status status="PASS" start="2026-06-08T21:40:01.134286" elapsed="2.077714"/>
+<status status="PASS" start="2026-06-09T20:51:42.086913" elapsed="2.587547"/>
 </kw>
 <kw name="Efetuar Login Como Admin" owner="Common_Steps">
 <kw name="Preencher Credenciais De Acesso" owner="Login_Steps">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-06-08T21:40:03.214514" level="INFO">Fills the text 'admin' in the given field.</msg>
+<msg time="2026-06-09T20:51:44.675897" level="INFO">Fills the text 'admin' in the given field.</msg>
 <arg>${INPUT_EMAIL}</arg>
 <arg>${email}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:03.213749" elapsed="0.013896"/>
+<status status="PASS" start="2026-06-09T20:51:44.675448" elapsed="0.012000"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-06-08T21:40:03.229019" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<msg time="2026-06-09T20:51:44.688326" level="INFO">Fills the text 'admin123' in the given field.</msg>
 <arg>${INPUT_SENHA}</arg>
 <arg>${senha}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:03.227982" elapsed="0.010948"/>
+<status status="PASS" start="2026-06-09T20:51:44.687659" elapsed="0.013028"/>
 </kw>
 <arg>admin</arg>
 <arg>admin123</arg>
-<status status="PASS" start="2026-06-08T21:40:03.213088" elapsed="0.025976"/>
+<status status="PASS" start="2026-06-09T20:51:44.675156" elapsed="0.025662"/>
 </kw>
 <kw name="Submeter Formulario De Login" owner="Login_Steps">
 <kw name="Click" owner="Browser">
-<msg time="2026-06-08T21:40:03.240273" level="INFO">Clicks the element 'id=btn-login-submit'.</msg>
+<msg time="2026-06-09T20:51:44.701887" level="INFO">Clicks the element 'id=btn-login-submit'.</msg>
 <arg>${BOTAO_ENTRAR}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:03.239698" elapsed="0.817909"/>
+<status status="PASS" start="2026-06-09T20:51:44.701450" elapsed="0.833705"/>
 </kw>
-<status status="PASS" start="2026-06-08T21:40:03.239264" elapsed="0.818513"/>
+<status status="PASS" start="2026-06-09T20:51:44.700995" elapsed="0.834282"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:04.889904" level="INFO">Waited for Element with selector id=page-title at state visible</msg>
+<msg time="2026-06-09T20:51:46.357402" level="INFO">Waited for Element with selector id=page-title at state visible</msg>
 <arg>id=page-title</arg>
 <arg>visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:04.057935" elapsed="0.832149"/>
+<status status="PASS" start="2026-06-09T20:51:45.535404" elapsed="0.822294"/>
 </kw>
-<status status="PASS" start="2026-06-08T21:40:03.212257" elapsed="1.677937"/>
+<status status="PASS" start="2026-06-09T20:51:44.674662" elapsed="1.683232"/>
 </kw>
-<status status="PASS" start="2026-06-08T21:40:01.133887" elapsed="3.756353"/>
+<status status="PASS" start="2026-06-09T20:51:42.086399" elapsed="4.271591"/>
 </kw>
 <kw name="Acessar Pagina" owner="Common_Steps">
 <kw name="Click" owner="Browser">
-<msg time="2026-06-08T21:40:04.891298" level="INFO">Clicks the element 'css=.nk-menu-item[data-page="equipamentos"] .nk-menu-link'.</msg>
+<msg time="2026-06-09T20:51:46.359734" level="INFO">Clicks the element 'css=.nk-menu-item[data-page="pagamentos"] .nk-menu-link'.</msg>
 <arg>css=.nk-menu-item[data-page="${page}"] .nk-menu-link</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:04.890839" elapsed="0.041711"/>
+<status status="PASS" start="2026-06-09T20:51:46.358958" elapsed="0.035372"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:04.939640" level="INFO">Waited for Element with selector id=page-equipamentos at state visible</msg>
+<msg time="2026-06-09T20:51:46.399381" level="INFO">Waited for Element with selector id=page-pagamentos at state visible</msg>
 <arg>id=page-${page}</arg>
 <arg>visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:04.932755" elapsed="0.007046"/>
+<status status="PASS" start="2026-06-09T20:51:46.394524" elapsed="0.005123"/>
 </kw>
-<arg>equipamentos</arg>
-<status status="PASS" start="2026-06-08T21:40:04.890434" elapsed="0.049475"/>
+<arg>pagamentos</arg>
+<status status="PASS" start="2026-06-09T20:51:46.358313" elapsed="0.041517"/>
 </kw>
-<kw name="Alterar Status Do Equipamento" owner="Equipamento_Steps">
-<kw name="Click" owner="Browser">
-<msg time="2026-06-08T21:40:04.940967" level="INFO">Clicks the element 'css=button[onclick="abrirModalStatus('eq-001')"]'.</msg>
-<arg>css=button[onclick="abrirModalStatus('${equip_id}')"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:04.940522" elapsed="0.030222"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:04.980243" level="INFO">Waited for Element with selector id=modal-status-equipamento at state visible</msg>
-<arg>${MODAL_STATUS}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:04.971036" elapsed="0.009384"/>
-</kw>
-<kw name="Select Options By" owner="Browser">
-<msg time="2026-06-08T21:40:04.981286" level="INFO">Selects the option(s) manutencao by attribute SelectAttribute.value from element id=status-eq-novo.</msg>
-<arg>${STATUS_SELECT_NOVO}</arg>
-<arg>value</arg>
-<arg>${novo_status}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:04.980616" elapsed="0.025548"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-06-08T21:40:05.007178" level="INFO">Clicks the element 'css=#modal-status-equipamento .modal-footer .btn-primary'.</msg>
-<arg>${BTN_CONFIRMAR_STATUS}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:05.006434" elapsed="0.258683"/>
-</kw>
-<arg>eq-001</arg>
-<arg>manutencao</arg>
-<status status="PASS" start="2026-06-08T21:40:04.940102" elapsed="0.325207"/>
-</kw>
-<kw name="Validar Status Alterado" owner="Equipamento_Steps">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:06.606863" level="INFO">Waited for Element with selector css=.toast-item.toast-success:has-text("Status alterado") at state visible</msg>
-<arg>css=.toast-item.toast-success:has-text("Status alterado")</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:05.266167" elapsed="1.340891"/>
-</kw>
-<status status="PASS" start="2026-06-08T21:40:05.265563" elapsed="1.341604"/>
-</kw>
-<kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2026-06-08T21:40:06.771841" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-08T21:40:06.607485" elapsed="0.164619"/>
-</kw>
-<tag>equipamento</tag>
-<tag>status</tag>
-<status status="PASS" start="2026-06-08T21:40:01.133275" elapsed="5.638986"/>
-</test>
-<status status="PASS" start="2026-06-08T21:40:00.819596" elapsed="5.959925"/>
-</suite>
-<suite id="s1-s2" name="Cenario09 Calculo Valor" source="D:\Download\Aluguel-de-equipamentos\Aluguel-de-equipamentos\tests\Cenario09_Calculo_Valor.robot">
-<test id="s1-s2-t1" name="Teste De Calculo De Valor" line="10">
-<kw name="Abrir Sistema Limpo E Logar" owner="Common_Steps" type="SETUP">
-<kw name="Abrir O Sistema Com Dados Limpos" owner="Common_Steps">
-<kw name="New Browser" owner="Browser">
-<msg time="2026-06-08T21:40:06.811642" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\517eb31a-48ae-46a0-8706-ff0a521e9ead"}</msg>
-<msg time="2026-06-08T21:40:07.029615" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Download\\Aluguel-de-equipamentos\\Aluguel-de-equipamentos\\results\\browser\\traces\\temp\\517eb31a-48ae-46a0-8706-ff0a521e9ead"}</msg>
-<arg>browser=chromium</arg>
-<arg>headless=False</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-06-08T21:40:06.810754" elapsed="0.219124"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2026-06-08T21:40:07.778645" level="INFO">Successfully initialized new page object and opened url: http://localhost/Aluguel-de-equipamentos/public/index.html</msg>
-<msg time="2026-06-08T21:40:07.778744" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>url=http://localhost/Aluguel-de-equipamentos/public/index.html</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2026-06-08T21:40:07.030297" elapsed="0.748658"/>
-</kw>
-<kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2026-06-08T21:40:07.786302" level="INFO">JavaScript executed successfully.</msg>
-<arg>${None}</arg>
-<arg>() =&gt; window.localStorage.clear()</arg>
+<kw name="Validar Existe Pagamentos" owner="Reserva_Steps">
+<kw name="Get Element Count" owner="Browser">
+<arg>${ROW_PAGAMENTOS}</arg>
+<arg>&gt;</arg>
+<arg>${0}</arg>
+<tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="PASS" start="2026-06-08T21:40:07.779151" elapsed="0.007335"/>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-06-09T20:51:46.400659" elapsed="0.005852"/>
 </kw>
-<kw name="Reload" owner="Browser">
-<msg time="2026-06-08T21:40:07.817029" level="INFO">Reloaded page with options: {"waitUntil": "load"}</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Reloads current active page.</doc>
-<status status="PASS" start="2026-06-08T21:40:07.786697" elapsed="0.030640"/>
+<status status="PASS" start="2026-06-09T20:51:46.400094" elapsed="0.006624"/>
+</kw>
+<kw name="Validar Detalhes Do Pagamento" owner="Reserva_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-09T20:51:46.408053" level="INFO">${linha} = css=#tbody-pagamentos tr:has-text("PAY-001")</msg>
+<var>${linha}</var>
+<arg>css=#tbody-pagamentos tr:has-text("${ref}")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-09T20:51:46.407586" elapsed="0.000497"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:07.837319" level="INFO">Waited for Element with selector id=login-card at state visible</msg>
-<arg>id=login-card</arg>
+<msg time="2026-06-09T20:51:46.416638" level="INFO">Waited for Element with selector css=#tbody-pagamentos tr:has-text("PAY-001") at state visible</msg>
+<arg>${linha}</arg>
 <arg>visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:07.817727" elapsed="0.019951"/>
-</kw>
-<status status="PASS" start="2026-06-08T21:40:06.810329" elapsed="1.027523"/>
-</kw>
-<kw name="Efetuar Login Como Admin" owner="Common_Steps">
-<kw name="Preencher Credenciais De Acesso" owner="Login_Steps">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-06-08T21:40:07.840008" level="INFO">Fills the text 'admin' in the given field.</msg>
-<arg>${INPUT_EMAIL}</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:07.839450" elapsed="0.010385"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-06-08T21:40:07.850666" level="INFO">Fills the text 'admin123' in the given field.</msg>
-<arg>${INPUT_SENHA}</arg>
-<arg>${senha}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:07.850033" elapsed="0.008567"/>
-</kw>
-<arg>admin</arg>
-<arg>admin123</arg>
-<status status="PASS" start="2026-06-08T21:40:07.838957" elapsed="0.019871"/>
-</kw>
-<kw name="Submeter Formulario De Login" owner="Login_Steps">
-<kw name="Click" owner="Browser">
-<msg time="2026-06-08T21:40:07.860684" level="INFO">Clicks the element 'id=btn-login-submit'.</msg>
-<arg>${BOTAO_ENTRAR}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:07.860119" elapsed="0.818406"/>
-</kw>
-<status status="PASS" start="2026-06-08T21:40:07.859200" elapsed="0.819509"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:09.508665" level="INFO">Waited for Element with selector id=page-title at state visible</msg>
-<arg>id=page-title</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:08.678904" elapsed="0.830005"/>
-</kw>
-<status status="PASS" start="2026-06-08T21:40:07.838126" elapsed="1.670940"/>
-</kw>
-<status status="PASS" start="2026-06-08T21:40:06.809704" elapsed="2.699438"/>
-</kw>
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2026-06-08T21:40:09.509983" level="INFO">${inicio} = 2026-06-09</msg>
-<var>${inicio}</var>
-<arg>increment=1 day</arg>
-<arg>result_format=%Y-%m-%d</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.509350" elapsed="0.000670"/>
-</kw>
-<kw name="Add Time To Date" owner="DateTime">
-<msg time="2026-06-08T21:40:09.517154" level="INFO">${fim} = 2026-06-14</msg>
-<var>${fim}</var>
-<arg>${inicio}</arg>
-<arg>5 days</arg>
-<arg>result_format=%Y-%m-%d</arg>
-<doc>Adds time to date and returns the resulting date.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.510180" elapsed="0.007028"/>
-</kw>
-<kw name="Acessar Pagina" owner="Common_Steps">
-<kw name="Click" owner="Browser">
-<msg time="2026-06-08T21:40:09.518794" level="INFO">Clicks the element 'css=.nk-menu-item[data-page="reservas"] .nk-menu-link'.</msg>
-<arg>css=.nk-menu-item[data-page="${page}"] .nk-menu-link</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.518152" elapsed="0.028820"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:09.551778" level="INFO">Waited for Element with selector id=page-reservas at state visible</msg>
-<arg>id=page-${page}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.547238" elapsed="0.004640"/>
-</kw>
-<arg>reservas</arg>
-<status status="PASS" start="2026-06-08T21:40:09.517619" elapsed="0.034369"/>
-</kw>
-<kw name="Abrir Formulario De Nova Reserva" owner="Reserva_Steps">
-<kw name="Click" owner="Browser">
-<msg time="2026-06-08T21:40:09.553768" level="INFO">Clicks the element 'css=#page-reservas button[onclick="abrirModalNovaReserva()"]'.</msg>
-<arg>${BTN_NOVA_RESERVA}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.553069" elapsed="0.030481"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:09.590945" level="INFO">Waited for Element with selector id=modal-nova-reserva at state visible</msg>
-<arg>${MODAL_NOVA_RESERVA}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.583777" elapsed="0.007376"/>
-</kw>
-<status status="PASS" start="2026-06-08T21:40:09.552283" elapsed="0.039009"/>
-</kw>
-<kw name="Preencher Reserva" owner="Reserva_Steps">
-<kw name="Select Options By" owner="Browser">
-<msg time="2026-06-08T21:40:09.592441" level="INFO">Selects the option(s) c-001 by attribute SelectAttribute.value from element id=sel-cliente-reserva.</msg>
-<arg>${SEL_CLIENTE_RESERVA}</arg>
-<arg>value</arg>
-<arg>${cliente_id}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.591978" elapsed="0.024879"/>
-</kw>
-<kw name="Select Options By" owner="Browser">
-<msg time="2026-06-08T21:40:09.617748" level="INFO">Selects the option(s) eq-001 by attribute SelectAttribute.value from element id=sel-equip-reserva.</msg>
-<arg>${SEL_EQUIP_RESERVA}</arg>
-<arg>value</arg>
-<arg>${equip_id}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.617104" elapsed="0.012305"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-06-08T21:40:09.630546" level="INFO">Fills the text '2026-06-09' in the given field.</msg>
-<arg>${RES_DATA_INICIO}</arg>
-<arg>${data_inicio}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.629707" elapsed="0.009019"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-06-08T21:40:09.639980" level="INFO">Fills the text '2026-06-14' in the given field.</msg>
-<arg>${RES_DATA_FIM}</arg>
-<arg>${data_fim}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.639107" elapsed="0.011169"/>
-</kw>
-<arg>c-001</arg>
-<arg>eq-001</arg>
-<arg>${inicio}</arg>
-<arg>${fim}</arg>
-<status status="PASS" start="2026-06-08T21:40:09.591507" elapsed="0.058969"/>
-</kw>
-<kw name="Validar Calculo Da Reserva" owner="Reserva_Steps">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-08T21:40:09.656169" level="INFO">Waited for Element with selector id=res-calculo at state visible</msg>
-<arg>${RES_CALCULO}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.651441" elapsed="0.004902"/>
+<status status="PASS" start="2026-06-09T20:51:46.408191" elapsed="0.008666"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-06-08T21:40:09.675168" level="INFO">Text: 'R$ 750,00'</msg>
-<arg>${CALC_TOTAL}</arg>
+<msg time="2026-06-09T20:51:46.445652" level="INFO">Text: 'PAY-001\tres-001\t\nPIX\n\tR$ 400,00\tPago\t01/02/2024'</msg>
+<arg>${linha}</arg>
 <arg>contains</arg>
-<arg>${total_esperado}</arg>
+<arg>${reserva}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.656572" elapsed="0.018718"/>
+<status status="PASS" start="2026-06-09T20:51:46.417193" elapsed="0.028566"/>
 </kw>
-<arg>750,00</arg>
-<status status="PASS" start="2026-06-08T21:40:09.650794" elapsed="0.024617"/>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-06-09T20:51:46.460062" level="INFO">Text: 'PAY-001\tres-001\t\nPIX\n\tR$ 400,00\tPago\t01/02/2024'</msg>
+<arg>${linha}</arg>
+<arg>contains</arg>
+<arg>${metodo}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-09T20:51:46.445926" elapsed="0.014251"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-06-09T20:51:46.475660" level="INFO">Text: 'PAY-001\tres-001\t\nPIX\n\tR$ 400,00\tPago\t01/02/2024'</msg>
+<arg>${linha}</arg>
+<arg>contains</arg>
+<arg>${valor}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-09T20:51:46.460399" elapsed="0.015591"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-06-09T20:51:46.494010" level="INFO">Text: 'PAY-001\tres-001\t\nPIX\n\tR$ 400,00\tPago\t01/02/2024'</msg>
+<arg>${linha}</arg>
+<arg>contains</arg>
+<arg>${status}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-09T20:51:46.476483" elapsed="0.017632"/>
+</kw>
+<arg>PAY-001</arg>
+<arg>res-001</arg>
+<arg>PIX</arg>
+<arg>R$ 400,00</arg>
+<arg>Pago</arg>
+<status status="PASS" start="2026-06-09T20:51:46.406986" elapsed="0.087229"/>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2026-06-08T21:40:09.847019" level="INFO">Closed browser</msg>
+<msg time="2026-06-09T20:51:46.660765" level="INFO">Closed browser</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-08T21:40:09.675669" elapsed="0.171525"/>
+<status status="PASS" start="2026-06-09T20:51:46.494429" elapsed="0.166504"/>
 </kw>
-<tag>calculo</tag>
-<tag>reserva</tag>
-<status status="PASS" start="2026-06-08T21:40:06.807039" elapsed="3.040240"/>
+<status status="PASS" start="2026-06-09T20:51:42.085598" elapsed="4.575420"/>
 </test>
-<status status="PASS" start="2026-06-08T21:40:06.784660" elapsed="3.067092"/>
-</suite>
-<status status="PASS" start="2026-06-08T21:40:00.771751" elapsed="9.083748"/>
+<status status="PASS" start="2026-06-09T20:51:41.537599" elapsed="5.128919"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">calculo</stat>
-<stat pass="1" fail="0" skip="0">equipamento</stat>
-<stat pass="1" fail="0" skip="0">reserva</stat>
-<stat pass="1" fail="0" skip="0">status</stat>
 </tag>
 <suite>
-<stat name="Cenario06 Gerenciamento Status &amp; Cenario09 Calculo Valor" id="s1" pass="2" fail="0" skip="0">Cenario06 Gerenciamento Status &amp; Cenario09 Calculo Valor</stat>
-<stat name="Cenario06 Gerenciamento Status" id="s1-s1" pass="1" fail="0" skip="0">Cenario06 Gerenciamento Status &amp; Cenario09 Calculo Valor.Cenario06 Gerenciamento Status</stat>
-<stat name="Cenario09 Calculo Valor" id="s1-s2" pass="1" fail="0" skip="0">Cenario06 Gerenciamento Status &amp; Cenario09 Calculo Valor.Cenario09 Calculo Valor</stat>
+<stat name="Cenario17" id="s1" pass="1" fail="0" skip="0">Cenario17</stat>
 </suite>
 </statistics>
 <errors>
